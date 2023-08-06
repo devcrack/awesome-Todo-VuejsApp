@@ -11,7 +11,7 @@
           <template v-slot:default="{ active, }">
             <v-list-item-action>
               <v-checkbox
-                :input-value="active"
+                :input-value="task.done"
                 color="primary"
               ></v-checkbox>
             </v-list-item-action>
