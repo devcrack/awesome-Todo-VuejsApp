@@ -35,17 +35,27 @@
         tasks:[
           {
             id: 1,
-            title: "Wake Up"
+            title: "Wake Up",
+            done: false
           },
           {
             id: 2,
-            title: "Get Bananas"
+            title: "Get Bananas",
+            done: false
           },
           {
             id: 3,
-            title: "Eat Bananas"
+            title: "Eat Bananas",
+            done: false
           }
         ]
+      }
+    },
+    methods: {
+      doneTask(id) {
+        let task = this.tasks.filter(task => task.id === id)[0];
+
+        task.done = !task.done;
       }
     }
   }
