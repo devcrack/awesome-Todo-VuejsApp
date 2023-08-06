@@ -7,7 +7,8 @@
        <div
        v-for="task in tasks"
         :key="task.id">
-         <v-list-item>
+         <v-list-item
+         @click="doneTask(task.id)">
           <template v-slot:default="{ active, }">
             <v-list-item-action>
               <v-checkbox
