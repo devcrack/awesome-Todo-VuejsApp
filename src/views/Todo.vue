@@ -8,7 +8,9 @@
        v-for="task in tasks"
         :key="task.id">
          <v-list-item
-         @click="doneTask(task.id)">
+         @click="doneTask(task.id)"
+         :class="{'blue lighten-5': task.done}"
+         >
           <template v-slot:default="{ active, }">
             <v-list-item-action>
               <v-checkbox
