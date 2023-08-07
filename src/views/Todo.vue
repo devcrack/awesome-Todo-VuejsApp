@@ -1,5 +1,11 @@
 <template>
   <div class="home">
+    <v-text-field
+        class="pa-3"
+        outlined
+        label="Append"
+        prepend-inner-icon="mdi-plus"
+          ></v-text-field>
      <v-list
       class="pt-0"
          flat
