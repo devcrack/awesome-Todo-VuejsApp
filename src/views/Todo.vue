@@ -10,11 +10,10 @@
         append-icon="mdi-plus"
         hide-details
           ></v-text-field>
-    <div v-if="tasks.length">
      <v-list
-      class="pt-0"
-         flat
-    >
+         v-if="tasks.length"
+         class="pt-0"
+         flat>
        <div
        v-for="task in tasks"
         :key="task.id">
@@ -48,12 +47,12 @@
          <v-divider></v-divider>
        </div>
     </v-list>
-    </div>
-    <div v-else
-    class="">
+    <div
+        v-else
+        class="no-tasks">
       <v-icon
-      size="50"
-      color="primary">
+          size="100"
+          color="primary">
         mdi-check
       </v-icon>
       <div class="text-h5 primary--text">
@@ -114,5 +113,10 @@
   }
 </script>
 <style lang="sass">
-.no
+.no-tasks
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  opacity: 0.5
 </style>
