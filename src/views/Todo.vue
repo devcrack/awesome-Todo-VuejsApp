@@ -10,6 +10,7 @@
         append-icon="mdi-plus"
         hide-details
           ></v-text-field>
+    <div v-if="tasks.length">
      <v-list
       class="pt-0"
          flat
@@ -47,6 +48,18 @@
          <v-divider></v-divider>
        </div>
     </v-list>
+    </div>
+    <div v-else
+    class="">
+      <v-icon
+      size="50"
+      color="primary">
+        mdi-check
+      </v-icon>
+      <div class="text-h5 primary--text">
+        No tasks
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,21 +70,21 @@
       return {
         newTaskTitle : '' ,
         tasks:[
-          {
-            id: 1,
-            title: "Wake Up",
-            done: false
-          },
-          {
-            id: 2,
-            title: "Get Bananas",
-            done: false
-          },
-          {
-            id: 3,
-            title: "Eat Bananas",
-            done: false
-          }
+      //     {
+      //       id: 1,
+      //       title: "Wake Up",
+      //       done: false
+      //     },
+      //     {
+      //       id: 2,
+      //       title: "Get Bananas",
+      //       done: false
+      //     },
+      //     {
+      //       id: 3,
+      //       title: "Eat Bananas",
+      //       done: false
+      //     }
         ]
       }
     },
@@ -100,3 +113,6 @@
     }
   }
 </script>
+<style lang="sass">
+.no
+</style>
