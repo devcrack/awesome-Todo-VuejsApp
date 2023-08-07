@@ -25,6 +25,11 @@
                 {{task.title}}
               </v-list-item-title>
             </v-list-item-content>
+            <v-list-item-action>
+          <v-btn icon>
+            <v-icon color="grey lighten-1">mdi-information</v-icon>
+          </v-btn>
+        </v-list-item-action>
           </template>
         </v-list-item>
          <v-divider></v-divider>
