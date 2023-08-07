@@ -26,7 +26,9 @@
               </v-list-item-title>
             </v-list-item-content>
             <v-list-item-action>
-          <v-btn icon>
+          <v-btn icon
+          @click.stop="deleteTask(task.id)"
+          >
             <v-icon color="primary lighten-1">mdi-delete</v-icon>
           </v-btn>
         </v-list-item-action>
@@ -63,10 +65,17 @@
       }
     },
     methods: {
+      getTask(id) {
+        return this.tasks.filter(task => task.id === id)[0];
+      },
       doneTask(id) {
-        let task = this.tasks.filter(task => task.id === id)[0];
+        let task = this.getTask(id);
 
         task.done = !task.done;
+      },
+      deleteTask(id) {
+        this.tasks = this.tasks.filter(task => task.id != id);
+
       }
     }
   }
